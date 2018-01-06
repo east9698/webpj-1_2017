@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>日経サイエンス雑誌記事管理システム</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- viewportの有効化（レスポンシブデザイン） -->
+    <link rel="stylesheet" type="text/css" href="magindex.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="magindex.js"></script>
+    <script>
+    //メニューボタン上にホバーしたら文字列を表示する（アニメーションはCSSにて付加）
+    $(document).ready(function () {
+      //var windowwidth = window.innerWidth();
+      //if (windowwidth > 750){
+      $(".icon").hover(
+        function () {
+          $(".drop>div").css("transform", "translateX(0)");
+        },
+        function () {
+          $(".drop>div").css("transform", "translateX(-100%)");
+        }
+
+      );//}
+    });
+    </script>
+  </head>
+
+  <body>
+
+    <header>
+      <div id="top_banners">
+        <a id="fit_jc_banner" href="http://www.jc.fit.ac.jp/"><img src="./img/fit_jc_banner.svg" alt="福岡工業大学短期大学部"></a>
+        <a id="web_pj_banner" href="http://anshun4.jc.fit.ac.jp/"><img src="./img/web_pj_banner.svg" alt="Web Programming Project"></a>
+      </div>
+
+      <h1 id="title">日経サイエンス雑誌記事Web管理システム</h1>
+    </header>
+
+    <!-- メニューボタン （iconクラスとtextクラスの各行が対応） -->
+    <nav id="menu_btn">
+      <ul class="icon">
+        <li> <a href="magtop.html" target="contentif" class="fa fa-home big"></a> </li>
+        <li> <a href="nik_kensaku_top.php" target="contentif" class="fa fa-search big"></a> </li>
+        <li> <a href="nikilist.php" target="contentif" class="fa fa-list big"></a> </li>
+        <li> <a href="edit.php" target="contentif" class="fa fa-pencil big"></a> </li>
+          <ul class="drop">
+            <div>
+              <li> <a href="genreadd.php" target="contentif">ジャンル追加</a> </li>
+              <li> <a href="genredel.php" target="contentif">ジャンル削除</a> </li>
+              <li> <a href="zashiadd.php" target="contentif">記事追加</a> </li>
+              <li> <a href="zashidel.php" target="contentif">記事削除</a> </li>
+            </div>
+          </ul>
+        <li> <a href="#" target="contentif" class="fa fa-question big"></a> </li>
+      </ul>
+      <!--<ul class="text">
+        <a href="magtop.html" target="contentif"><li> home </li></a>
+        <a href="#"><li> search </li></a>
+        <a href="#"><li> list </li></a>
+        <a href="#"><li> edit </li></a>
+        <a href="#"><li> help </li></a>
+      </ul>-->
+    </nav>
+
+    <!--  各機能の切り替え部位  -->
+    <iframe name="contentif" src="magtop.html" id="contentif" ></iframe>
+
+  </body>
+
+  </html>

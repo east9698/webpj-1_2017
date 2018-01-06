@@ -1,0 +1,161 @@
+form {
+  margin-top: 50px;
+}
+
+
+table {
+  margin: 0 auto;
+  max-width: 650px;
+  border: none;
+  background: #f5f5f5;
+}
+
+form > table {
+  border-top: solid 1px #666;
+  border-bottom: solid 1px #666;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.form  th {
+  vertical-align: middle;
+  height: 53px;
+  width: 124px;
+  border: none;
+  border-right: solid 1px #666;
+  margin: 0;
+  text-align: center;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form  td.contents {
+  padding: 0;
+    margin: 0;
+    height: 53px;
+    width: 100px;
+    border: none;
+    color: #666;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.form td.contents:fst-child {
+  padding: 0 0 0 10px;
+  vertical-align: middle;
+}
+
+.form td.bar {
+  height: 1px;
+  width: 100%;
+  border: none;
+  border-top: solid 1px #34495e;
+}
+
+/*検索フォームに適用するスタイル*/
+
+.form input {
+  margin: 5px;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+}
+
+.form input.textbox[type="text"] {
+
+  border: 2px solid #aaa;
+  height: 1.25rem;
+  max-width: 80%;
+  font-size: 1.1rem;
+  caret-color: dodgerblue;
+  transition: all .3s;
+
+}
+
+.form input.short {
+  width: 5em;
+  margin-right: calc(80% - 5em);
+}
+
+.form input.wide {
+  width: 30rem;
+
+}
+.form input.textbox:hover {
+  border: 2px solid #1abc9c;
+}
+
+.form input.textbox:focus {
+  box-shadow: 0 0 7px #1abc9c;
+	border: 2px solid #1abc9c;
+}
+
+.form input.btn {
+  color: white;
+  font-size: 1.25rem;
+  width: 5em;
+  transition: background .3s;
+}
+
+.form input.btn[type="submit"] {
+
+  background: #40c040;
+}
+
+.form input.btn[type="submit"]:hover,
+.form input.btn[type="submit"]:focus {
+
+  background: #80c080;
+}
+
+.form input.btn[type="reset"] {
+
+  background: #4080c0;
+}
+
+.form input.btn[type="reset"]:hover,
+.form input.btn[type="reset"]:focus {
+
+  background: #50a0c0;
+}
+
+.form input.btn:active {
+  background: grey;
+}
+
+
+.list {
+	border-collapse: collapse;
+	text-align: left;
+	line-height: 1.5;
+	border: 1px solid #ccc;
+}
+.list thead {
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	background: #04162e;
+}
+.list thead th {
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	color: #fff;
+}
+.list tbody th {
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	border-bottom: 1px solid #ccc;
+	background: #efefef;
+}
+.list td {
+	padding: 10px;
+	vertical-align: top;
+	border-bottom: 1px solid #ccc;
+}

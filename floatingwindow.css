@@ -1,0 +1,59 @@
+.floatingwindow {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width:650px;
+    height:500px;
+    max-height: calc(100vh - (75px + 50px) );
+}
+
+nav#floating_menu {
+  position: absolute;
+}
+
+nav#floating_menu a.open {
+  color: grey;
+  font-size: 1.25rem;
+  margin: 0 10px;
+}
+
+.floatingwindow a.close{
+    position:absolute;
+    right:20px;
+    top:1px;
+    z-index: 50;
+}
+
+
+div.floatingwindow {
+  position: absolute;
+}
+
+.floatingwindow a.close img{
+   width: 20px;
+   color: orange;
+}
+
+.floatingwindow dl{
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.4);
+    margin:0;
+}
+
+.floatingwindow dl dt{
+    height:25px;
+    line-height:25px;
+    text-indent:1em;
+    color:white;
+    font-weight:bold;
+    cursor:move;
+    background: grey;
+}
+
+.floatingwindow dl dd{
+    margin:0;
+    overflow-y: scroll;
+
+}

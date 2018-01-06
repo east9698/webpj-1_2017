@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TOP - 日経サイエンス雑誌記事管理システム</title>
+    <link rel="stylesheet" href="magindex.css">
+    <link rel="stylesheet" href="magtop.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--  <script>
+    $(document).ready(function () {
+      $("#intro_teams dt").each(function(){
+        var currnent = $(this);
+        console.log(currnent);
+        for (var i = 1; i <= $(this).length; i++) {
+          $(this).css("grid-row", i);
+        }
+
+      });
+      $("#intro_teams dd").each(function(){
+
+        for (var i = 1; i <= $(this).length; i++) {
+          $(this).css("grid-row", i);
+        }
+
+      });
+
+    });
+    </script>
+
+      <style media="screen">
+    #intro_teams li img {
+    width: 400px;
+    height: 225px;
+  }
+</style>
+<script>
+
+$(document).ready(function(){
+var item_num = $('.photostream').length;
+var deg = 360.0/item_num;
+var red = (deg*Math.PI/180.0);
+//var circle_r = $(".photostream"). * 2.5;
+var circle_r = 400;
+$('.photostream').each(item_mun, function(i, elem) {
+var x = Math.cos(red * i) * circle_r + circle_r;
+var y = Math.sin(red * i) * circle_r + circle_r;
+$(elem).css('left', x);
+$(elem).css('top', y);
+});
+});
+
+
+</script>-->
+  </head>
+  <body>
+
+
+
+    <dl id="intro_teams">
+
+      <dt style="grid-row: 1; grid-column: 1;"><img src="./img/zeng.jpg" alt=""></dt>
+      <dd style="grid-row: 1; grid-column: 2;">
+        <h4>指導教授</h4>
+        <ul class="member_list">
+          <a href="http://anshun4.jc.fit.ac.jp/" target="_blank"><li>曽 超 教授</li></a>
+        </ul>
+      </dd>
+
+      <dt  style="grid-row: 2; grid-column: 2;"><img src="./img/zeng.jpg" alt=""></dt>
+      <dd  style="grid-row: 2; grid-column: 1;">
+        <h4>デザイン・統括チーム</h4>
+        <ul class="member_list">
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>東 昭太朗</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1681061/" target="_blank"><li>長岡 真司</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781018/" target="_blank"><li>竹下 克輝</li></a>
+        </ul>
+      </dd>
+
+      <dt style="grid-row: 3; grid-column: 1;"><img src="./img/zeng.jpg" alt=""></dt>
+      <dd style="grid-row: 3; grid-column: 2;">
+        <h4>リスト作成チーム</h4>
+        <ul class="member_list">
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781041/" target="_blank"><li>外堀 輝子</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>江島 貫太</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>香野 健斗</li></a>
+        </ul>
+      </dd>
+
+      <dt style="grid-row: 4; grid-column: 2;"><img src="./img/zeng.jpg" alt=""></dt>
+      <dd style="grid-row: 4; grid-column: 1;">
+        <h4>検索エンジンチーム</h4>
+        <ul class="member_list">
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781063/" target="_blank"><li>渕上 朔太郎</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>姫野 淳平</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1681061/" target="_blank"><li>熊谷 雅哉</li></a>
+        </ul>
+      </dd>
+
+      <dt style="grid-row: 5; grid-column: 1;"><img src="./img/zeng.jpg" alt=""></dt>
+      <dd style="grid-row: 5; grid-column: 2;">
+        <h4>データ追加チーム</h4>
+        <ul class="member_list">
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781045/" target="_blank"><li>直松 将冶</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>加藤 哲太郎</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>永井 凌太</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>川野 武流</li></a>
+        </ul>
+      </dd>
+
+      <dt style="grid-row: 6; grid-column: 2;"><img src="./img/zeng.jpg" alt=""></dt>
+      <dd style="grid-row: 6; grid-column: 1;">
+        <h4>データ削除チーム</h4>
+        <ul class="member_list">
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781060/" target="_blank"><li>萩原 和人</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>松尾 直峻</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>伊原 航</li></a>
+        </ul>
+      </dd>
+
+    </dl>
+
+    <!--
+    <ul id="intro_member" style="background-color:#21252b; color:white;">
+      <li class="photostream">
+        <h4>指導教授</h4>
+        <img src="./img/zeng.jpg" alt="">
+        <ul>
+          <li>曽 超 教授</li>
+        </ul>
+      </li>
+
+      <li class="photostream">
+        <h4>デザイン・統括チーム</h4>
+        <img src="./img/zeng.jpg" alt="">
+        <ul>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/"><li>東 昭太朗</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/"><li>長岡 真司</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/"><li>竹下 克輝</li></a>
+        </ul>
+      </li>
+
+      <li class="photostream">
+        <h4>リスト作成チーム</h4>
+        <img src="./img/zeng.jpg" alt="">
+        <ul>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>外堀 輝子</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>江島 貫太</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>香野 健斗</li></a>
+        </ul>
+      </li>
+
+      <li class="photostream">
+        <h4>検索エンジンチーム</h4>
+        <img src="./img/zeng.jpg" alt="">
+        <ul>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>渕上 朔太郎</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>姫野 淳平</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>熊谷 雅哉</li></a>
+        </ul>
+      </li>
+
+      <li class="photostream">
+        <h4>データ追加チーム</h4>
+        <img src="./img/zeng.jpg" alt="">
+        <ul>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>直松 将冶</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>加藤 哲太郎</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>永井 凌太</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>川野 武流</li></a>
+        </ul>
+      </li>
+
+      <li class="photostream">
+        <h4>データ削除チーム</h4>
+        <img src="./img/zeng.jpg" alt="">
+        <ul>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>萩原 和人</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>松尾 直峻</li></a>
+          <a href="http://anshun9.jc.fit.ac.jp/~s1781061/" target="_blank"><li>伊原 航</li></a>
+        </ul>
+      </li>
+
+    </ul>-->
+
+  </body>
+</html>

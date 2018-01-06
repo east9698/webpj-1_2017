@@ -1,0 +1,73 @@
+h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+  height: 20%;
+  line-height: 2em;
+}
+
+ul.member_list {
+  height: calc(100% - 20%);
+  display: block;
+}
+
+img {
+  width: 400px;
+  height: calc(400px / 16 * 9);
+}
+
+dl#intro_teams {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 300px 300px 300px 300px 300px 300px;
+}
+
+#intro_teams dt,
+#intro_teams dd {
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+/*
+#intro_member {
+
+  background-color:#21252b;
+  color:white;
+
+}
+#intro_member li{
+  display:block;
+  height:300px;
+}
+
+#intro_member li img {
+
+  position: absolute;
+  width: 400px;
+  height: 260px;
+
+}
+
+#intro_member li div {
+
+  position:absolute;
+  left: 500px;
+}
+
+
+#intro_member h4{
+  text-align:center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.photostream {
+
+  position: absolute;
+  width: 40px;
+      height: 40px;
+
+
+}
+*/
