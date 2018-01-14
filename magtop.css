@@ -1,25 +1,38 @@
+:root {
+  --team-photo-x:;
+}
+
+
 h4 {
-  font-size: 1.5rem;
+  font-size: 2.25rem;
   font-weight: bold;
   display: block;
-  height: 20%;
-  line-height: 2em;
 }
 
 ul.member_list {
-  height: calc(100% - 20%);
   display: block;
+  font-size: 1.25rem;
+  margin-top: 1vw;
+}
+@media (max-width: 1000px) {
+  h4 {
+    font-size: 4vw;
+  }
 }
 
 img {
-  width: 400px;
-  height: calc(400px / 16 * 9);
+  width: 40vw;
+  height: calc(40vw / 16 * 9);
+  margin: calc((30vw - (40vw / 16 * 9)) / 2) 0;
+  max-width: 380px;
 }
 
 dl#intro_teams {
     display: grid;
-    grid-template-columns: 400px 400px;
-    grid-template-rows: 300px 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 30vw);
+    width: 80vw;
+    margin: 0 auto;
 }
 
 #intro_teams dt,

@@ -24,6 +24,20 @@
         }
 
       );//}
+      $("i.fa").on({
+        'mouseenter':function(){
+          $(this).toggleClass("fa-inverse", false).css("transition", "all 0.3s");
+          $(this).prev("i").toggleClass("fa-inverse", true).css("transition", "all 0.3s");
+        },
+        'mouseleave':function(){
+          $(this).toggleClass("fa-inverse", true).css("transition", "all 0.3s");
+          $(this).prev("i").toggleClass("fa-inverse" false).css("transition", "all 0.3s");
+        }
+      });
+
+      if (window.innerWidth =< 1000) {
+
+      }
     });
     </script>
   </head>
@@ -41,11 +55,41 @@
 
     <!-- メニューボタン （iconクラスとtextクラスの各行が対応） -->
     <nav id="menu_btn">
-      <ul class="icon">
-        <li> <a href="magtop.html" target="contentif" class="fa fa-home big"></a> </li>
-        <li> <a href="nik_kensaku_top.php" target="contentif" class="fa fa-search big"></a> </li>
-        <li> <a href="nikilist.php" target="contentif" class="fa fa-list big"></a> </li>
-        <li> <a href="edit.php" target="contentif" class="fa fa-pencil big"></a> </li>
+      <a href="magtop.html" target="contentif">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+          <i class="fa fa-home fa-stack-1x"></i>
+        </span>
+      </a>
+      <a href="nik_kensaku_top.php" target="contentif">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+          <i class="fa fa-search fa-stack-1x"></i>
+        </span>
+      </a>
+      <a href="nikilist.php" target="contentif">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+          <i class="fa fa-list fa-stack-1x"></i>
+        </span>
+      </a>
+      <a href="edit.php" target="contentif">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+          <i class="fa fa-pencil fa-stack-1x"></i>
+        </span>
+      </a>
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+        <i class="fa fa-question fa-stack-1x"></i>
+      </span>
+
+<!--
+        <img src="./img/home.svg" alt="home" class="icon">
+        <a href="magtop.html" target="contentif" class="fa fa-home icon">
+        <a href="nik_kensaku_top.php" target="contentif" class="fa fa-search icon">
+        <a href="nikilist.php" target="contentif" class="fa fa-list icon">
+        <a href="edit.php" target="contentif" class="fa fa-pencil icon">
           <ul class="drop">
             <div>
               <li> <a href="genreadd.php" target="contentif">ジャンル追加</a> </li>
@@ -54,8 +98,7 @@
               <li> <a href="zashidel.php" target="contentif">記事削除</a> </li>
             </div>
           </ul>
-        <li> <a href="#" target="contentif" class="fa fa-question big"></a> </li>
-      </ul>
+        <a href="#" target="contentif" class="fa fa-question icon">-->
       <!--<ul class="text">
         <a href="magtop.html" target="contentif"><li> home </li></a>
         <a href="#"><li> search </li></a>

@@ -4,51 +4,34 @@
 :root {
   --banner-fitjc-x:30vw;
   --banner-webpj-x:50vw;
+  --banner-y:
   }
 
 * {
   font-family: 'Noto Sans JP', sans-serif;
   margin: 0;
   padding: 0;
-  text-decoration: none;
-  list-style: none;
 }
 
-html {
-  overflow-x: hidden;
-  overflow-y: auto;
-}
+html { overflow-x: hidden; overflow-y: auto }
 
-body {
-  background-color: #ededed;
-}
+body { background-color: #ededed }
 
-a {
-  color: white;
-}
-a:link {
-  text-decoration: none;
-}
-a:visited{
-  color: white;
-}
-a:hover {
-  /*background: #f5f5f5;*/
-}
+a:link { color:#000; text-decoration:none }
+a:visited { color:#000; text-decoration:none }
+a:hover { color:#000; text-decoration:none }
+a:active { color:#000; text-decoration:none }
 
-li {
-  list-style: none;
-}
+li { list-style: none }
 
 /* ----- html > body > header ----- */
 
 div#top_banners {
-  width: 80%;
   height: 5vw;
   max-height: 75px;
   /*min-height: 30px;*/
-  margin: 0 auto;
   display: flex;
+  justify-content: center;
 }
 
 #top_banners img {
@@ -95,55 +78,61 @@ div#top_banners {
 
 /* ----- html > body > nav (メニューボタン関連) ----- */
 
-#menu_btn {
-    position: fixed;
-    top: calc(50vh - 150px);
-    z-index: 100;
-
+nav#menu_btn {
+    position: fixed; /* 特定位置に固定 */
+    /*top: calc((50vh - 75px + 3rem) - 5vw * 5); *//* ((画面の縦の中心 - ヘッダーの高さ) - メニューボタン(#menu_btn)の高さ)   */
+    z-index: 1000;
+    /*background: #484848;
+    opacity: 0.4;*/
+    display: flex; /* Flexboxの利用 */
+    flex-direction: column; /* 縦方向に並べる　*/
+    left: 10px;
+    top: calc((100vh - (60px * 5)) / 2);
   }
 
-#menu_btn > ul {
-    display: block;
-    background-color: #484848;
-    position: fixed;
-    /*border: 5px solid #676767;*/
-    border-left: none;
-    padding-left: 5px;
-    /*left: 5px;*/
-
+#menu_btn span {
+  font-size: 30px;
+}
+@media (max-width: 1000px) {
+  nav#menu_btn {
+    left: 0.5vw;
+    top: calc((100vh - (3vw * 2 * 5)) / 2);
   }
-#menu_btn > ul > li {
-    list-style: none;
-    display: block;
-    margin: 20px 5px;
-    width: 20vw;
+  #menu_btn span {
+    font-size: 3vw;
+  }
+}
+#menu_btn span > i {
+  transition: all 0.3;
+}
+
+
+/*
+#menu_btn > .icon {
+    width: 5vw;
     max-width: 65px;
-    height: 20vw;
+    height: 5vw;
     max-height: 65px;
-    color: white;
 
-  }
+    font-size: 2vw;
 
+    /*align-items: center;
+    justify-content: space-evenly;
 
-.icon > li > .big {
-    height: inherit;
-    color: white;
-    font-size: 2.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border: 3px solid;
-    box-sizing: border-box;
     border-radius: 10px;
-    transition: font-size 0.2s ease;
+    box-sizing: border-box;
+
+    transition: font-size .2s ease;
+
+
   }
 
-.icon > li > .big:hover {
-    font-size: 3.25rem;
-    background-color: #484848;
+#menu_btn > .icon:hover {
+    font-size: 6vw;
   }
 
-#menu_btn > .icon > .drop {
+#menu_btn > a.icon > .drop {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -152,7 +141,7 @@ div#top_banners {
 
     color: white;
 
-    /*height: calc(60px * 4);*/
+    /*height: calc(60px * 4);
     border: none;
     width: 6rem;
     z-index: 50;
@@ -200,7 +189,7 @@ div#top_banners {
       align-items: center;
 
   }
-
+*/
 
   /* ----- html > body > iframe (表示切替部分) ----- */
 
@@ -212,8 +201,8 @@ div#top_banners {
   /* 表示域最大高からtop_banner, title分を引く */
   height: calc(100vh - (75px + 50px) );
   /* メニューボタンに重ならないよう余白をつける*/
-  left: calc(100% - (100% - 140px) );
-  width: calc(100% - 140px);
+  width: 95vw;
+  left: 5vw;
 
 }
 

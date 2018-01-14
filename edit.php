@@ -5,7 +5,9 @@
     <link rel="stylesheet" href="magindex.css">
     <link rel="stylesheet" href="floatingwindow.css">
     <link rel="stylesheet" href="search.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="floatingwindow.js"></script>
@@ -16,13 +18,13 @@
       <a href="#genre_list" class="open">ジャンル一覧</a>
       <a href="#genre_add" class="open">ジャンル追加</a>
       <a href="#zashi_add" class="open">雑誌データ追加</a>
+      <a href="#initialize" class="open">ファイルの初期化</a>
       <div id="test1"></div>
       <div id="test2"></div>
-
     </nav>
 
     <div id="genre_list" class="floatingwindow" tabindex="0">
-      <a href="edit.php" class="close"><img src="./img/close.svg" alt="閉じる" /></a>
+      <a href="edit.php" class="close fa fa-close fa-2x fa-fw"></a>
       <dl>
         <dt>現在のジャンル一覧</dt>
         <dd>
@@ -81,7 +83,7 @@
     </div>
 
     <div id="genre_add" class="floatingwindow" tabindex="0">
-      <a href="edit.php" class="close"><img src="./images/close.png" alt="閉じる" /></a>
+      <a href="edit.php" class="close fa fa-close fa-2x fa-fw"></a>
       <dl>
         <dt>新規ジャンルの追加</dt>
         <dd>
@@ -124,7 +126,7 @@
     </div>
 
     <div id="zashi_add" class="floatingwindow"  tabindex="0">
-      <a href="edit.php" class="close"><img src="./images/close.png" alt="閉じる" /></a>
+      <a href="edit.php" class="close fa fa-close fa-2x fa-fw"></a>
       <dl>
         <dt>新規雑誌データ追加</dt>
         <dd>
@@ -212,6 +214,21 @@
               print "<div>追加処理が行われた</div><br />\n";
             }
             ?>
+        </dd>
+      </dl>
+    </div>
+
+    <div id="initialize" class="floatingwindow"  tabindex="0">
+      <a href="edit.php" class="close fa fa-close fa-2x fa-fw"></a>
+      <dl>
+        <dt>データベースファイルの初期化</dt>
+        <dd>
+          <p>
+            本アプリケーションはデモ用のため、初期データを用意しています。
+            <br>
+            必要に応じて以下のボタンをクリックして実行してください。
+          </p>
+          <button type="button" name="doInitialize">初期化を実行</button>
         </dd>
       </dl>
     </div>

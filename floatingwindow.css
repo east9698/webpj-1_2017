@@ -20,9 +20,8 @@ nav#floating_menu a.open {
 
 .floatingwindow a.close{
     position:absolute;
-    right:20px;
-    top:1px;
-    z-index: 50;
+    right:5px;
+    font-size: 25px;
 }
 
 
