@@ -11,6 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="floatingwindow.js"></script>
+    <script src="initialize.js"></script>
     <title>編集 - 日経サイエンス雑誌記事Web管理システム</title>
   </head>
   <body>
@@ -228,7 +229,8 @@
             <br>
             必要に応じて以下のボタンをクリックして実行してください。
           </p>
-          <button type="button" name="doInitialize">初期化を実行</button>
+          <button type="button" name="doInitialize" id="doInitialize">初期化を実行</button>
+          <div id="resultInitialize">結果：</div>
         </dd>
       </dl>
     </div>
