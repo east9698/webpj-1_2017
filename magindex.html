@@ -9,36 +9,17 @@
     rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
     crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="magindex.js"></script>
     <script>
-    //メニューボタン上にホバーしたら文字列を表示する（アニメーションはCSSにて付加）
-    $(document).ready(function () {
-      //var windowwidth = window.innerWidth();
-      //if (windowwidth > 750){
-      $(".icon").hover(
-        function () {
-          $(".drop>div").css("transform", "translateX(0)");
-        },
-        function () {
-          $(".drop>div").css("transform", "translateX(-100%)");
-        }
-
-      );//}
-      $("i.fa").on({
-        'mouseenter':function(){
-          $(this).toggleClass("fa-inverse", false).css("transition", "all 0.3s");
-          $(this).prev("i").toggleClass("fa-inverse", true).css("transition", "all 0.3s");
-        },
-        'mouseleave':function(){
-          $(this).toggleClass("fa-inverse", true).css("transition", "all 0.3s");
-          $(this).prev("i").toggleClass("fa-inverse" false).css("transition", "all 0.3s");
-        }
-      });
-
-      if (window.innerWidth =< 1000) {
-
+    $("i.fa").on({
+      'mouseenter':function(){
+        $(this).toggleClass("fa-inverse", false).css("transition", "all 0.3s");
+        $(this).prev("i").toggleClass("fa-inverse", true).css("transition", "all 0.3s");
+      },
+      'mouseleave':function(){
+        $(this).toggleClass("fa-inverse", true).css("transition", "all 0.3s");
+        $(this).prev("i").toggleClass("fa-inverse", false).css("transition", "all 0.3s");
       }
-    });
+    })
     </script>
   </head>
 
@@ -53,59 +34,69 @@
       <h1 id="title">日経サイエンス雑誌記事Web管理システム</h1>
     </header>
 
-    <!-- メニューボタン （iconクラスとtextクラスの各行が対応） -->
     <nav id="menu_btn">
-      <a href="magtop.html" target="contentif">
+
+      <a href="magtop.html" target="contentif" title="ホームへ">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
           <i class="fa fa-home fa-stack-1x"></i>
         </span>
       </a>
-      <a href="nik_kensaku_top.php" target="contentif">
+
+      <a href="nik_kensaku_top.php" target="contentif" title="検索ページ">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
           <i class="fa fa-search fa-stack-1x"></i>
         </span>
       </a>
-      <a href="nikilist.php" target="contentif">
+
+      <a href="nikilist.php" target="contentif" title="記事一覧表示">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
           <i class="fa fa-list fa-stack-1x"></i>
         </span>
       </a>
-      <a href="edit.php" target="contentif">
+
+      <a href="genreadd.php" target="contentif" title="ジャンル追加">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-          <i class="fa fa-pencil fa-stack-1x"></i>
+          <i class="fa fa-plus-circle fa-stack-1x"></i>
         </span>
       </a>
-      <span class="fa-stack fa-lg">
+
+      <a href="zashiadd.php" target="contentif" title="記事追加">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+          <i class="fa fa-calendar-plus-o fa-stack-1x"></i>
+        </span>
+      </a>
+
+      <a href="genredel.php" target="contentif" title="ジャンル削除">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+          <i class="fa fa-minus-circle fa-stack-1x"></i>
+        </span>
+      </a>
+
+      <a href="zashidel.php" target="contentif" title="記事削除">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+          <i class="fa fa-calendar-minus-o fa-stack-1x"></i>
+        </span>
+      </a>
+
+      <a href="edit.php" target="contentif" title="管理画面">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+          <i class="fa fa-user fa-stack-1x"></i>
+        </span>
+      </a>
+
+      <!--<span class="fa-stack fa-lg">
         <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
         <i class="fa fa-question fa-stack-1x"></i>
-      </span>
+      </span> -->
 
-<!--
-        <img src="./img/home.svg" alt="home" class="icon">
-        <a href="magtop.html" target="contentif" class="fa fa-home icon">
-        <a href="nik_kensaku_top.php" target="contentif" class="fa fa-search icon">
-        <a href="nikilist.php" target="contentif" class="fa fa-list icon">
-        <a href="edit.php" target="contentif" class="fa fa-pencil icon">
-          <ul class="drop">
-            <div>
-              <li> <a href="genreadd.php" target="contentif">ジャンル追加</a> </li>
-              <li> <a href="genredel.php" target="contentif">ジャンル削除</a> </li>
-              <li> <a href="zashiadd.php" target="contentif">記事追加</a> </li>
-              <li> <a href="zashidel.php" target="contentif">記事削除</a> </li>
-            </div>
-          </ul>
-        <a href="#" target="contentif" class="fa fa-question icon">-->
-      <!--<ul class="text">
-        <a href="magtop.html" target="contentif"><li> home </li></a>
-        <a href="#"><li> search </li></a>
-        <a href="#"><li> list </li></a>
-        <a href="#"><li> edit </li></a>
-        <a href="#"><li> help </li></a>
-      </ul>-->
     </nav>
 
     <!--  各機能の切り替え部位  -->

@@ -15,7 +15,7 @@
 
 html { overflow-x: hidden; overflow-y: auto }
 
-body { background-color: #ededed }
+body { background-color: #80DEEA }
 
 a:link { color:#000; text-decoration:none }
 a:visited { color:#000; text-decoration:none }
@@ -32,6 +32,7 @@ div#top_banners {
   /*min-height: 30px;*/
   display: flex;
   justify-content: center;
+  background: #DCEDC8;
 }
 
 #top_banners img {
@@ -58,7 +59,7 @@ div#top_banners {
 
 #title {
 
-  background-color: #454545;
+  background-color: #455A64;
   color: white;
   height: 1.5em;
   line-height: 1.5em;
@@ -88,7 +89,14 @@ nav#menu_btn {
     flex-direction: column; /* 縦方向に並べる　*/
     left: 10px;
     top: calc((100vh - (60px * 5)) / 2);
+    background: #DCEDC8;
+    padding: 0.2vw;
+    border-radius: 5px;
   }
+
+#menu_btn > a{
+  padding: 5px 1px
+}
 
 #menu_btn span {
   font-size: 30px;
@@ -98,14 +106,27 @@ nav#menu_btn {
     left: 0.5vw;
     top: calc((100vh - (3vw * 2 * 5)) / 2);
   }
+
+  #menu_btn > a{
+    padding: 0.5vw 0;
+  }
   #menu_btn span {
     font-size: 3vw;
   }
 }
-#menu_btn span > i {
-  transition: all 0.3;
+
+
+#menu_btn span > i{
+  transition: all 0.5s ease;
 }
 
+
+#menu_btn span > i:hover {
+  transform: scaleX(-1);
+  text-shadow: #FFCC00 0px 0px 20px;
+  color: #EA4515;
+
+}
 
 /*
 #menu_btn > .icon {
@@ -201,8 +222,18 @@ nav#menu_btn {
   /* 表示域最大高からtop_banner, title分を引く */
   height: calc(100vh - (75px + 50px) );
   /* メニューボタンに重ならないよう余白をつける*/
-  width: 95vw;
-  left: 5vw;
+  width: 92.5vw;
+  left: 7.5vw;
+
+}
+
+h2.funcTitle {
+    margin: 15px auto;
+    text-align: center;
+    font-size: 2rem;
+    border: solid 1px;
+    border-radius: 10px;
+    width: 30%;
 
 }
 

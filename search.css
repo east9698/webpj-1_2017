@@ -5,7 +5,6 @@ form {
 
 table {
   margin: 0 auto;
-  max-width: 650px;
   border: none;
   background: #f5f5f5;
 }
@@ -17,7 +16,7 @@ form > table {
   border-spacing: 0 10px;
 }
 
-.form  th {
+table.form  th {
   vertical-align: middle;
   height: 53px;
   width: 124px;
@@ -30,7 +29,7 @@ form > table {
   font-weight: bold;
 }
 
-.form  td.contents {
+table.form  td.contents {
   padding: 0;
     margin: 0;
     height: 53px;
@@ -45,21 +44,58 @@ form > table {
     overflow: hidden;
 }
 
-.form td.contents:fst-child {
+table.form td.contents:fst-child {
   padding: 0 0 0 10px;
   vertical-align: middle;
 }
 
-.form td.bar {
+table.form td.bar {
   height: 1px;
   width: 100%;
   border: none;
   border-top: solid 1px #34495e;
 }
 
-/*検索フォームに適用するスタイル*/
 
-.form input {
+/*----------------------------------*/
+
+table.list {
+	border-collapse: collapse;
+	text-align: left;
+	line-height: 1.5;
+	border: 1px solid #ccc;
+}
+table.list thead {
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	background: #04162e;
+}
+table.list thead th {
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	color: #fff;
+}
+table.list tbody th {
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	border-bottom: 1px solid #ccc;
+	background: #efefef;
+}
+table.list td {
+	padding: 10px;
+	vertical-align: top;
+	border-bottom: 1px solid #ccc;
+}
+
+
+
+
+
+/*フォーム要素に適用するスタイル*/
+
+input {
   margin: 5px;
   padding: 0.5rem;
   outline: none;
@@ -67,7 +103,7 @@ form > table {
   border-radius: 7px;
 }
 
-.form input.textbox[type="text"] {
+input.textbox[type="text"] {
 
   border: 2px solid #aaa;
   height: 1.25rem;
@@ -78,84 +114,55 @@ form > table {
 
 }
 
-.form input.short {
+input.short {
   width: 5em;
   margin-right: calc(80% - 5em);
 }
 
-.form input.wide {
+input.wide {
   width: 30rem;
 
 }
-.form input.textbox:hover {
+input.textbox:hover {
   border: 2px solid #1abc9c;
 }
 
-.form input.textbox:focus {
+input.textbox:focus {
   box-shadow: 0 0 7px #1abc9c;
 	border: 2px solid #1abc9c;
 }
 
-.form input.btn {
+/* ボタン関連*/
+
+input.btn {
   color: white;
   font-size: 1.25rem;
   width: 5em;
   transition: background .3s;
 }
 
-.form input.btn[type="submit"] {
+input.btn[type="submit"] {
 
   background: #40c040;
 }
 
-.form input.btn[type="submit"]:hover,
-.form input.btn[type="submit"]:focus {
+input.btn[type="submit"]:hover,
+input.btn[type="submit"]:focus {
 
   background: #80c080;
 }
 
-.form input.btn[type="reset"] {
+input.btn[type="reset"] {
 
   background: #4080c0;
 }
 
-.form input.btn[type="reset"]:hover,
-.form input.btn[type="reset"]:focus {
+input.btn[type="reset"]:hover,
+input.btn[type="reset"]:focus {
 
   background: #50a0c0;
 }
 
-.form input.btn:active {
+input.btn:active {
   background: grey;
-}
-
-
-.list {
-	border-collapse: collapse;
-	text-align: left;
-	line-height: 1.5;
-	border: 1px solid #ccc;
-}
-.list thead {
-	border-right: 1px solid #ccc;
-	border-left: 1px solid #ccc;
-	background: #04162e;
-}
-.list thead th {
-	padding: 10px;
-	font-weight: bold;
-	vertical-align: top;
-	color: #fff;
-}
-.list tbody th {
-	padding: 10px;
-	font-weight: bold;
-	vertical-align: top;
-	border-bottom: 1px solid #ccc;
-	background: #efefef;
-}
-.list td {
-	padding: 10px;
-	vertical-align: top;
-	border-bottom: 1px solid #ccc;
 }

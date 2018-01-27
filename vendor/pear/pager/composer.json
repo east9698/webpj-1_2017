@@ -1,0 +1,34 @@
+{
+    "name": "pear/pager",
+    "description": "Data paging class",
+    "license": "BSD",
+    "homepage": "http://pear.php.net/package/Pager",
+    "support": {
+        "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Pager",
+        "source": "https://github.com/pear/Pager"
+    },
+    "authors": [
+        {
+            "email": "l.alberton@quipo.it",
+            "name": "Lorenzo Alberton",
+            "role": "Lead"
+        },
+        {
+            "email": "richard@phpguru.org",
+            "name": "Richard Heyes",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Pager": "./"
+        }
+    },
+    "include-path": [
+        "./"
+    ],
+    "type": "library",
+    "require-dev": {
+        "simpletest/simpletest": "~1.1"
+    }
+}

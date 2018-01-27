@@ -5,15 +5,19 @@
     <title>日経サイエンス バックナンバーの検索</title>
     <link rel="stylesheet" type="text/css" href="magindex.css">
     <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="validationEngine.jquery.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="magindex.js"></script>
-
+    <script src="jquery.validationEngine-ja.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body>
+    <h2 class="funcTitle">雑誌データ検索結果一覧</h2>
+    <hr size="1" />
+
     <form method="post" action="nik_kensaku.php" id="search">
-      <table border="1" align="center">
-        <tbody class="form">
+      <table border="1" align="center" class="form">
+        <tbody>
           <tr>
             <th>ジャンル(分野)</th>
             <td class="contents">

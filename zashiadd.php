@@ -5,14 +5,22 @@
     <title>雑誌記事データの追加</title>
     <link rel="stylesheet" type="text/css" href="magindex.css">
     <link rel="stylesheet" href="search.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script type="text/javascript" src="magindex.js"></script>
-    <script type="text/javascript" src="magformCheck.js"></script>
+    <link rel="stylesheet" href="validationEngine.jquery.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="jquery.validationEngine-ja.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+	   $(document).ready(function() {
+	      jQuery("#checkForm").validationEngine();
+	     });
+     </script>
   </head>
+
   <body>
+    <h2 class="funcTitle">雑誌記事データの追加</h2>
     <form method="post" action="zashiadd.php"  id="checkForm">
-      <table>
-        <tbody class="form">
+      <table class="form">
+        <tbody>
           <tr>
             <th>ジャンル(分野)</th>
             <td class="contents">

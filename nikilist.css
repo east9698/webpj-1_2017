@@ -1,0 +1,109 @@
+#menu{
+  text-align:center;
+  margin: 0 auto;
+  padding:0;
+  font-size:16px;
+  width: 1000px;
+  height: 40px;
+}
+
+#menu ul{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+
+#menu li:first-child{
+  padding-left:10px;
+  border-left:solid 2px cyan;
+}
+
+
+#menu li{
+  display:inline;
+  margin-right:10px;
+  border-right:solid 2px cyan;
+  padding-right:10px;
+  font-weight:bold;
+}
+
+#contentif{
+  display:block;
+  width:100%;
+  height:420px;
+}
+
+#kensaku_main{
+  text-align:center;
+  line-height:1.2;
+}
+
+#kensaku_form{
+  width:800px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#kensaku_des{
+  width:800px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:left;
+}
+
+#top_des{
+  width:800px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#menu a:link{
+  text-decoration:none;
+  color:#000000;
+}
+
+#menu a:visited{
+  color:#000080;
+}
+
+#menu a:hover{
+  color:#ff0000;
+}
+
+#menu a:active{
+  color:#ff8000;
+}
+
+#topbutton {
+  /* ▼表示位置を画面の右下に固定 */
+  position: fixed; /* ←表示場所を固定 */
+  bottom: 18px;   /* ←下端からの距離 */
+  right: 18px;    /* ←右端からの距離 */
+  width: 7em;     /* ←横幅 */
+
+  /* ▼最初は非表示にしておく */
+  display: none;
+
+
+  /* ▼配色・配置・文字の装飾など */
+  background-color: #BDBDBD; /* ←背景色 */
+  opacity: 0.75;             /* ←透明度 */
+  border-radius: 24px;       /* ←角丸の半径 */
+  text-align: center;    /* ←文字の位置 */
+  font-size: 120%;       /* ←文字サイズ */
+  font-weight: bold;     /* ←文字の太さ */
+  margin: 0px;    /* ←外側の余白 */
+  padding: 10px;  /* ←内側の余白 */
+}
+
+#topbutton a {
+  /* ▼リンクの装飾 */
+  color: white;          /* ←文字色 */
+  text-decoration: none; /* ←下線なし */
+}
+
+#topbutton a:hover {
+  /* ▼マウスが載ったときの装飾 */
+  color: black;              /* ←文字色 */
+  text-decoration: underline; /* ←下線あり */
+}

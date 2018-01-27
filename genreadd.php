@@ -2,14 +2,58 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>ジャンルの追加画面</title>
+    <title>ジャンル追加</title>
     <link rel="stylesheet" type="text/css" href="magindex.css">
     <link rel="stylesheet" href="search.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script type="text/javascript" src="magindex.js"></script>
-    <script type="text/javascript" src="magformCheck.js"></script>
+    <link rel="stylesheet" href="validationEngine.jquery.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="jquery.validationEngine-ja.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+	   $(document).ready(function() {
+	      jQuery("#checkform").validationEngine();
+	     });
+     </script>
+
   </head>
+
   <body>
+    <h2 class="funcTitle">新規ジャンル追加</h2>
+    <form action="genreadd.php" method="post" name="MyForm" id="checkform">
+      <table class="form">
+        <tbody>
+          <tr>
+            <th>新規ジャンル番号</th>
+            <td  class="contents">
+              <input type="text" name="genre_no" class="validate[required.custom[onlyNumberSp]] text-input textbox short">
+            </td>
+          </tr>
+
+          <tr>
+            <td class="bar" colspan="2"></td>
+          </tr>
+
+          <tr>
+            <th>新規ジャンル名</th>
+            <td class="contents">
+              <input type="text" name="genre_name" class="validate[required] text-input textbox">
+            </td>
+          </tr>
+
+          <tr>
+            <td class="bar" colspan="2"></td>
+          </tr>
+
+          <tr>
+            <td colspan="2" class="contents">
+              <input type="submit" value="追加" class="btn">
+              <input type="reset" value="クリア" class="btn">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+
     <table class="list">
       <caption>現在のジャンル一覧</caption>
       <thead>
@@ -62,39 +106,5 @@
       </tbody>
     </table>
 
-    <form action="genreadd.php" method="post" name="MyForm" id="checkForm">
-      <table class="form">
-        <tbody>
-          <tr>
-            <th>新規ジャンル番号</th>
-            <td  class="contents">
-              <input type="text" name="genre_no" class="validate[required.custom[onlyNumberSp]] text-input textbox short">
-            </td>
-          </tr>
-
-          <tr>
-            <td class="bar" colspan="2"></td>
-          </tr>
-
-          <tr>
-            <th>新規ジャンル名</th>
-            <td class="contents">
-              <input type="text" name="genre_name" class="validate[required] text-input textbox">
-            </td>
-          </tr>
-
-          <tr>
-            <td class="bar" colspan="2"></td>
-          </tr>
-
-          <tr>
-            <td colspan="2" class="contents">
-              <input type="submit" value="追加" class="btn">
-              <input type="reset" value="クリア" class="btn">
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </form>
   </body>
 </html>

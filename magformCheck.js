@@ -1,4 +1,3 @@
-$(document).ready(dunction()) {
 
   $("head").append("<link>");
   css = $("head").children(":last");
@@ -21,8 +20,8 @@ $(document).ready(dunction()) {
     data: null,
     dataType: "script",
     success: function(){
-      if($("#checkform").length > 0){
-	$("#checkform").validationEngine();
+      if($("#checkForm").length > 0){
+	$("#checkForm").validationEngine();
       }
     }
   });

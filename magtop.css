@@ -1,5 +1,6 @@
 :root {
   --team-photo-x:;
+  --aspect-reito: calc(4/3); /* アスペクト比 4:3 */
 }
 
 
@@ -22,9 +23,10 @@ ul.member_list {
 
 img {
   width: 40vw;
-  height: calc(40vw / 16 * 9);
-  margin: calc((30vw - (40vw / 16 * 9)) / 2) 0;
+  height: calc(40vw / var(--aspect-reito));
+  margin: calc((30vw - (40vw / var(--aspect-reito))) / 2) 0;
   max-width: 380px;
+  max-height: calc(380px / var(--aspect-reito));
 }
 
 dl#intro_teams {
