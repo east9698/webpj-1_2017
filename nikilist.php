@@ -51,7 +51,7 @@
     //10,title,2015,7
     //一気にファイルを行ごとに配列に読み込む
     ?>
-    <h2 class="funcTitle">--雑誌データの一覧--</h2>
+    <h2 class="funcTitle">雑誌データの一覧</h2>
     <marquee scrollamount="10" truespeed>記事の総数は<?php print $total;?>件です。</marquee>
 
     <table align="center" border="1" style="width:90%;">
@@ -66,7 +66,7 @@
       </tr>
     </table>
     <hr size="1">
-    <table class="list">
+    <table class="list" style="width:90%;" border="1">
       <thead>
         <tr>
           <th scope="col" width="30%">ジャンル</th>

@@ -32,7 +32,7 @@
   fclose ($fp);
   ?>
   <form method="post" action="zashidel.php">
-    <table class="list">
+    <table class="list" style="width:90%;" border="1">
       <caption>次の雑誌一覧表から削除するものを選択してください</caption>
       <thead>
         <tr>
@@ -77,7 +77,7 @@
           $data = preg_split("/,/",$data_line);
           //$data[] =["16", "気配りできるコンピューター,2005,4"
           print "<tr>";
-          print "<td><input type=\"checkbox\" name=\"dels[]\" value=\"" . $kiji_cnt ."\"></td>\n";
+          print "<td><input type=\"checkbox\" name=\"dels[]\" style=\"font-size:1.8em;\" value=\"" . $kiji_cnt ."\"></td>\n";
           print "<td>" . $genre[$data[0]] . "</td><td>" . $data[1] .
           "</td><td>" . $data[2] . "</td><td>" . $data[3] . "</td></tr>\n";
           $kiji_data["" . $kiji_cnt] = implode(",", $data);

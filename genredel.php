@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -21,7 +21,7 @@
 
   <form method="post" action="genredel.php">
 
-    <table class="list">
+    <table class="list" border="1">
       <caption>次の現ジャンル一覧表から<br>削除するジャンルを選択してください</caption>
       <thead>
         <tr>
@@ -70,7 +70,7 @@
 
 
         foreach($genre as $no => $name){
-          print "<tr><td><input type=\"checkbox\" name=\"dels[]\" value=\"" . "" . $no .
+          print "<tr><td><input type=\"checkbox\" style=\"font-size:1.8em;\" name=\"dels[]\" value=\"" . "" . $no .
           "\"></td>\n";
           print "<td>" . $no . "</td><td>" . $name . "</td></tr>\n";
         }

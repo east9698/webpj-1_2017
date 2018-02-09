@@ -12,7 +12,7 @@
     <script src="jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body>
-    <h2 class="funcTitle">雑誌データ検索結果一覧</h2>
+    <h2 class="funcTitle">雑誌データ検索フォーム</h2>
     <hr size="1" />
 
     <form method="post" action="nik_kensaku.php" id="search">
@@ -21,7 +21,7 @@
           <tr>
             <th>ジャンル(分野)</th>
             <td class="contents">
-              <select name="genre[]" multiple>
+              <select name="genre[]" multiple style="font-size:1.3em;">
                 <option value="111" selected>全分野</option>
                 <?php
                 setlocale(LC_ALL, 'ja_JP.UTF-8');
@@ -68,15 +68,15 @@
               rsort($year);                            //配列を降順にソート
               sort($month);                            //配列を昇順にソート
 
-              print('<select name="year">' . "\n");  //年
-              print('<option value="0" selected>-</option>' . "\n");
+              print('<select name="year" style="font-size:1.3em;">' . "\n");  //年
+              print('<option value="0" selected>---</option>' . "\n");
               for($i=0;$i<count($year);$i++) {
                 print "<option value=\"". $year[$i] . "\">". $year[$i] . "</option>";
               }
               print("</select>年\n");
 
-              print('<select name="month">' . "\n");  //月
-              print('<option value="0" selected>-</option>' . "\n");
+              print('<select name="month" style="font-size:1.3em;">' . "\n");  //月
+              print('<option value="0" selected>---</option>' . "\n");
               for($i=0;$i<count($month);$i++) {
                 print "<option value=\"". $month[$i] . "\">". $month[$i] . "</option>";
               }

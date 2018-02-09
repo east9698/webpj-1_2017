@@ -24,7 +24,7 @@
           <tr>
             <th>ジャンル(分野)</th>
             <td class="contents">
-              <select name="genre">
+              <select name="genre" style="font-size:1.3em;">
                 <?php
                 setlocale(LC_ALL, 'ja_JP.UTF-8');
                 $genre_file = "genre.txt";

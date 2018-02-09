@@ -11,11 +11,11 @@
 
   <body>
 
-    <h2 class="function">雑誌データ検索結果一覧</h2>
+    <h2 class="funcTitle">雑誌データ検索結果一覧</h2>
     <div align="right"><a href="nik_kensaku_top.php">検索トップ画面へ</a></div>
     <hr size="1" />
 
-    <table class="list">
+    <table class="list" border="1" style="width:90%;">
       <thead>
         <tr>
           <th scope="col" width="30%">ジャンル</th>

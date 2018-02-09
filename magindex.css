@@ -66,6 +66,7 @@ div#top_banners {
   /* "height" と "line-height" の値を同じにしておくことで上下のセンタリングができる(vertical-alignはブロック要素には適用不可)*/
   padding-left: 5px;
   font-size: 2rem;
+  text-align:center;
 }
 
 @media (max-width: 750px) {
@@ -88,7 +89,7 @@ nav#menu_btn {
     display: flex; /* Flexboxの利用 */
     flex-direction: column; /* 縦方向に並べる　*/
     left: 10px;
-    top: calc((100vh - (60px * 5)) / 2);
+    /*top: calc((100vh - (60px * 5)) / 2);*/
     background: #DCEDC8;
     padding: 0.2vw;
     border-radius: 5px;
@@ -126,6 +127,10 @@ nav#menu_btn {
   text-shadow: #FFCC00 0px 0px 20px;
   color: #EA4515;
 
+}
+
+.form_elem{
+  font-size:1.5em !important;
 }
 
 /*

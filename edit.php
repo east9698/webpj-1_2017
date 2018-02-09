@@ -21,6 +21,35 @@
     <script>
      $(document).ready(function() {
         jQuery(".checkForm").validationEngine();
+        /*function ajaxload(url, part, where) {
+          $.ajax({
+                    method: 'GET',
+                    url: url,
+                    dataType: 'html',
+                    success: function(data, textStatus, jqXHR) {
+                      console.log(jqXHR + "" + textStatus);
+                      var deleted = data//.replace("<!DOCTYPE html>", "");
+                      var parsed = $.parseHTML(deleted);
+                      var excerpt = parsed[part];
+                      console.log(parsed);
+                      console.log(excerpt);
+
+                      //var cbhtml = $(data).html();
+                      //cbhtml = cbhtml.replace("<!doctype html>", "");
+                      var position = where + " dd";
+                      $(position).append(parsed);
+                  },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                      alert(jqXHR + "" + textStatus + "" + errorThrown);
+                  }
+               });
+        };
+        ajaxload("genreadd.php", 19, "#genre_list");
+        ajaxload("genreadd.php", 17, "#genre_add");
+        ajaxload("genredel.php", 19, "#genre_del");
+        ajaxload("zashiadd.php", 17, "#zashi_add");
+        ajaxload("zashidel.php", 19, "#zashi_del");*/
+
        });
      </script>
     <title>編集 - 日経サイエンス雑誌記事Web管理システム</title>
@@ -62,7 +91,7 @@
                 $genre[$data[0]] = $data[1];
               }
               fclose ($fp);
-              /*if($_SERVER['REQUEST_METHOD'] == 'POST'){
+              if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $new_genre_no = $_POST['genre_no'];
                 $new_genre_name = $_POST['genre_name'];
                 if($new_genre_no == ""){
@@ -84,7 +113,8 @@
                   print "<div>追加処理が行われた</div><br />\n";
                 }
 
-              }*/
+              }
+
               foreach($genre as $no => $name){
                 print "<tr><th scope='row'>" . $no . "</th><td>" . $name . "</td></tr>\n";
               }
@@ -101,7 +131,7 @@
       <dl>
         <dt>新規ジャンルの追加</dt>
         <dd>
-          <form action="genreadd.php" method="post" name="MyForm" class="checkForm">
+          <form action="edit.php#genre_add" method="post" name="MyForm" class="checkForm">
             <table class="form">
               <tbody>
                 <tr>
@@ -144,7 +174,7 @@
       <dl>
         <dt>ジャンルの削除</dt>
         <dd>
-          <form action="genredel.php" method="post" name="MyForm" class="checkForm">
+          <form action="edit.php#genre_del" method="post" name="MyForm" class="checkForm">
             <table class="list">
               <caption>次の一覧表から削除するジャンルを選択してください</caption>
               <thead>
@@ -200,7 +230,6 @@
                   print "<td>" . $name . "</td>";
                   print "</tr>\n";
                 }
-
               ?>
 
               <tr>
@@ -329,8 +358,7 @@
           }
           fclose ($fp);
           ?>
-
-          <form method="post" action="zashiadd.php"  class="checkForm">
+          <form method="post" action="edit.php#zashi_del"  class="checkForm">
             <table class="list">
               <thead>
                 <tr>
@@ -413,7 +441,7 @@
             <br>
             必要に応じて以下のボタンをクリックして実行してください。
           </p>
-          <button type="button" name="doInitialize" id="doInitialize">初期化を実行</button>
+        <a href="edit.php"><button type="button" name="doInitialize" id="doInitialize">初期化を実行</button></a>
           <div id="resultInitialize">結果：</div>
         </dd>
       </dl>
